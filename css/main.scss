@@ -1,0 +1,548 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import "/bower_components/bootstrap/dist/css/bootstrap.min.css";
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+body {
+  padding-bottom: 70px;
+  background-color: #CCEEFF;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://static.wixstatic.com/media/a60710612bbc4609ac93e78a1fa234c0.png);
+}
+
+.row {
+  margin: 0px;
+}
+
+.title  {
+  color: #5A7972;
+  font-family: cursive;
+  font-size: 67px;
+  top: 46px;
+  left: 160px;
+  width: 389px;
+  position: absolute;
+  text-align: center;
+}
+
+.title.under {
+  font-size: 27px;
+  top: 140px;
+}
+
+.navbar {
+  width: 466px;
+  top: 86px;
+  left: 700px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0px;
+  border-color: white;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.collapse {
+  padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-size: 17px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #0C3C60;
+  padding: 15px 26px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: rgba(175, 203, 224, 1);
+  transition: background-color 0.4s ease 0s;
+  color: #0C3C60;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  transition: background-color 0.5s ease;
+  background-color: rgba(92, 105, 123, 1);
+  color: white;
+}
+
+.carousel {
+  top: 0px;
+  left: 0px;
+  width: 980px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 12px solid transparent;
+}
+
+.carousel-textarea {
+  top: 60px;
+  left: 14px;
+  width: 398px;
+  height: 277px;
+  position: absolute;
+  background-color: rgba(27, 153, 232, 0.7);
+}
+
+.carousel-textarea-text {
+  top: 16px;
+  left: 9px;
+  width: 344px;
+  position: absolute;
+  visibility: inherit;
+}
+
+.font1 {
+  color: #DAEDFF;
+  font-size: 31px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.font2 {
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  font-family: cursive;
+  font-size: 44px;
+  line-height: 1.4em;
+  text-align: left;
+  margin-left: -50px;
+}
+
+.sticker {
+  top: 0px;
+  left: 570px;
+  width: 257px;
+  height: 234px;
+  position: absolute;
+}
+
+.sticker-text {
+  top: 120px;
+  left: 140px;
+  width: 230px;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 19px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+}
+
+.panel {
+  top: 10px;
+  left: 50%;
+  width: 980px;
+  height: 200px;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 0px;
+  border-radius: 0px;
+  margin-left: -490px;
+}
+
+.panel.price {
+  top: 220px;
+  height: 290px;
+  display: block;
+}
+
+.panel-body {
+  top: 20px;
+  left: 250px;
+  width: 705px;
+  color: #0C3C60;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  position: absolute;
+  text-align: justify;
+}
+
+.index {
+  top: 25px;
+  left: -260px;
+  width: 230px;
+  height: 100px;
+  background-color: rgba(92, 105, 123, 1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  border: 0px solid rgba(218, 237, 255, 1);
+  position: absolute;
+}
+
+.index-text {
+  top: 10px;
+  left: 50px;
+  width: 178px;
+  position: absolute;
+  font-size: 24px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  color: white;
+}
+
+.index-image {
+  width: 35%;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+.link {
+  top: 440px;
+  left: -220px;
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  transition: color 0.4s ease 0s;
+  color: #5C697B !important;
+}
+
+.footer-background {
+  background-color: rgba(175, 203, 224, 1);
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 88px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  left: 0px;
+}
+
+.footer-text {
+  font-size: 13px;
+  font-family: sans-serif;
+  color: #0C3C60;
+  top: 20px;
+  left: 185px;
+  position: absolute;
+}
+
+.price-image {
+  top: 12px;
+  left: 12px;
+  width: 956px;
+  height: 266px;
+  position: absolute;
+}
+
+.list {
+  font-family:sans-serif;
+}
+td {
+  padding:10px;
+  border:solid 1px #eee;
+}
+
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  display:inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:4px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-4px;
+  right:-5px;
+}
+
+#price-list {
+  height: 472px;
+  left: 100%;
+  width: 699px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: 250px;
+  margin-top: 24px;
+}
+
+.search {
+  float: right;
+  margin: 0px 11px;
+  width: 147px;
+  height: 23px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
+  padding: 0 6px;
+  font-size: 12px;
+  margin: 7px;
+}
+
+.search-background {
+  border-radius: 6px 6px 0px 0px;
+  height: 37px;
+  background-color: #AFCBE0 !important;
+  overflow: hidden;
+}
+
+.price-list {
+  top: 510px;
+  left: 50%;
+  width: 980px;
+  height: 630px;
+  position: absolute;
+}
+
+#tablesorter thead tr th {
+  color: #0C3C60 !important;
+  background-color: #AFCBE0 !important;
+  font-size: 16px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  padding: 6px;
+}
+
+#tablesorter {
+  margin: 1px 0px;
+}
+
+.list {
+  color: #062134;
+  font-size: 13px;
+  line-height: 1.4em;
+}
+
+.list tr td {
+  padding: 7px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-color: #DAEDFF;
+}
+
+.tablesorter-default tbody>tr:hover>td {
+  background-color: #1B99E8 !important;
+}
+
+.panel.price {
+  top: 0px;
+}
+
+.panel.price-list {
+  top: 200px;
+}
+
+.panel-body.price {
+  top: 500px;
+  left: 39px;
+  width: 879px;
+  position: absolute;
+  font-size: 17px;
+}
+
+.line {
+  top: 600px;
+  left: 27px;
+  width: 926px;
+  height: 5px;
+  position: absolute;
+  border-bottom: 3px solid rgba(27, 153, 232, 1);
+}
+
+.price-label {
+  top: -476px;
+  left: -50px;
+  width: 250px;
+  height: 71px;
+  background-color: rgba(92, 105, 123, 1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  border: 0px solid rgba(218, 237, 255, 1);
+  position: absolute;
+}
+
+.price-text {
+  top: 20px;
+  left: 40px;
+  width: 178px;
+  position: absolute;
+  font-size: 24px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  color: white;
+}
+
+.panel.contacts {
+  top: 200px !important;
+}
+
+.contacts-map {
+  left: 0;
+  width: 980px;
+  height: 485px;
+  position: absolute;
+  padding: 12px;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  border: 0px;
+}
+
+.panel.contacts {
+  top: 238px;
+  height: 889px;
+}
+
+.contacts .panel-body {
+  left: 12px;
+  top: 520px;
+  width: 956px;
+}
+
+.contacts-label {
+  top: 0px;
+  left: -34px;
+  width: 225px;
+  height: 38px;
+  background-color: rgba(92, 105, 123, 1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  border: 0px solid rgba(218, 237, 255, 1);
+  position: absolute;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: white;
+  padding: 7px;
+}
+
+.panel-body input, textarea {
+  background-color: rgba(149, 198, 236, 1);
+  border: 0px;
+  border-radius: 0px;
+  color: #062134;
+  margin: 0 0 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.panel-body textarea {
+  height: 106px;
+  resize: none;
+}
+
+.panel-body button {
+  border: 0;
+  border-radius: 0px;
+  color: #FFFFFF !important;
+  background-color: rgba(27, 153, 232, 1) !important;
+  padding: 5px;
+  float: right;
+}
