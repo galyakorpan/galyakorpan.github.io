@@ -5,7 +5,7 @@ $(function() {
   });
 
   $('.carousel').carousel({
-    interval: 144000
+    interval: 4000
   }, 'pause');
 
   $('.body div').hide();
