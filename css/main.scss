@@ -57,7 +57,7 @@ $on-laptop:        800px;
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 30px;
   background-color: #CCEEFF;
   height: 100%;
@@ -75,17 +75,17 @@ p {
   margin-bottom: 15px;
 }
 
-.col-md-7 {
-  margin-top: 15px;
-}
-
 @media screen and (max-width: 1255px) {
-  .title {
-    font-size: 350% !important;
+  .navbar-brand {
+    font-size: 330% !important;
   }
 
-  .title.under {
-    font-size: 140% !important;
+  .title {
+    min-height: 43px !important;
+  }
+
+  .under {
+    font-size: 40%;
   }
 
   .navbar-default .navbar-nav>li>a {
@@ -103,12 +103,16 @@ p {
 }
 
 @media screen and (max-width: 1030px) {
-  .title {
-    font-size: 300% !important;
+  .navbar-brand {
+    font-size: 260% !important;
   }
 
-  .title.under {
-    font-size: 120% !important;
+  .title {
+    min-height: 38px !important;
+  }
+
+  .under {
+    font-size: 30%;
   }
 
   .navbar-default .navbar-nav>li>a {
@@ -131,12 +135,17 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .title {
-    font-size: 250% !important;
+  .navbar-brand {
+    font-size: 200% !important;
+    text-align: left !important;
   }
 
-  .title.under {
-    font-size: 100% !important;
+  .title {
+    min-height: 30px !important;
+  }
+
+  .under {
+    font-size: 20%;
   }
 
   .navbar-default .navbar-nav>li>a {
@@ -151,53 +160,59 @@ p {
   #textarea-text {
     font-size: 40% !important;
   }
+
+  .navbar {
+    background-color: white;
+  }
+
+  .navbar-nav {
+    float: none !important;
+  }
 }
 
-.title  {
+a.navbar-brand {
   color: #5A7972 !important;
   font-family: cursive;
   font-size: 400%;
-  width: 100%;
   text-align: center;
+  padding: 5px;
+  height: 100%;
 }
 
-.title.under {
-  font-size: 160%;
-  margin-top: 20px;
+.title {
+  min-height: 50px;
 }
 
-.navbar-default {
-  padding: 0px;
-  border: 0;
-  background-color: transparent;
+.under {
+  font-size: 50%;
 }
 
-.navbar-collapse {
-  border: 0;
-  float:right;
+.navbar-toggle {
+  border: 1px solid #5c697b;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #5c697b;
 }
 
 .navbar-nav {
+  float: right;
   border-radius: 0px;
   border-color: white;
   background-color: white;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-nav>li>a {
   font-size: 100%;
   font-family: sans-serif;
   text-align: center;
   color: #0C3C60;
-  padding: 15px 25px;
+  padding: 15px 35px;
+  margin: 0;
+  width: 100%;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  background-color: rgba(175, 203, 224, 1);
-  transition: background-color 0.4s ease 0s;
-  color: #0C3C60;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-nav>li>a:hover {
   transition: background-color 0.5s ease;
   background-color: rgba(92, 105, 123, 1);
   color: white;
@@ -309,10 +324,6 @@ p {
 .index-image {
   width: 100%;
   margin-bottom: 5%;
-}
-
-.col-md-12 {
-  padding: 0px;
 }
 
 .link {
