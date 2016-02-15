@@ -11,10 +11,10 @@ email: your-email@domain.com
 description: Шукаєте якісний та швидкий сервіс по ремонту одягу? Тоді вам до нас. Швейна майстерня "Майстриня" в Черкасах
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://maystrunya.ck.ua/" # the base hostname & protocol for your site
-twitter_username:
-github_username:
-facebook_username:
-vkontakte_username:
+twitter_username: maystrynya
+github_username: galyakorpan
+facebook_username: maystrunya
+vkontakte_username: maystrunya
 
 # Build settings
 markdown: kramdown
