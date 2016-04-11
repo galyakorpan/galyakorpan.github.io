@@ -17,4 +17,4 @@ facebook_username: maystrunya
 vkontakte_username: maystrunya
 
 # Build settings
-markdown: kramdown
+gems:
