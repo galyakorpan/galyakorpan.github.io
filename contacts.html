@@ -14,20 +14,22 @@ layout: default
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-body">
+    <div itemscope itemtype="http://schema.org/LocalBusiness" class="panel-body">
       <div class="col-md-3">
         <div class="contacts-label">
           <p class="text-center">АДРЕСА</p>
         </div>
       </div>
-      <div class='main' itemscope itemtype='http://schema.org/Organization'>
+      <div class='main'>
         <div class="col-md-3">
           <strong>Майстриня</strong><br>
-          <div itemprop='addressLocality'> Черкаси, вул. Гагаріна, 17</div>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" itemprop='addressLocality'>
+          <span itemprop="addressLocality"> Черкаси,</span>
+          <span itemprop="streetAddress"> вул. Гагаріна, 17</span></div>
         </div>
         <div class="col-md-3">
-          <strong>Телефон:</strong><div itemprop='telephone'>
-            0969780193<br></div>
+          <strong>Телефон:</strong>
+          <div><span itemprop="telephone">0969780193</span><br></div>
           <strong>email:</strong><br>
           <div itemprop='email'>galya@maystrunya.ck.ua</div>
         </div>
