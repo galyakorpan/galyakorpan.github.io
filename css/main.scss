@@ -56,6 +56,12 @@ $on-laptop:        800px;
   width: 85%;
 }
 
+.custom-h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
 body {
   padding-top: 40px;
   padding-bottom: 30px;
@@ -75,6 +81,13 @@ p {
   margin-bottom: 15px;
 }
 
+h1 {
+
+}
+
+h2 {
+  visible: hidden;
+}
 @media screen and (max-width: 1255px) {
   .navbar-brand {
     font-size: 330% !important;
